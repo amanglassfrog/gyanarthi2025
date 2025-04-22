@@ -1,26 +1,252 @@
+
 @import "tailwindcss";
-
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+
+
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: #ffffff;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.logo {
+  height: 62px;
+  width: 198px;
+}
+
+.heading {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 72px;
+  text-align: left;
+}
+
+.paragraph {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: left;
+}
+
+.homebutton {
+  background-color: #FFCC00;
+
+}
+
+.hometext {
+  color: #FFCC00;
+}
+
+.placement_comapny_slider {
+  padding: 138px 64px 146px 64px;
+  text-align: center;
+  background-color: #F5F8FE;
+  ;
+}
+
+@media only screen and (max-width: 600px) {
+  .placement_comapny_slider {
+    padding: 44px 37px 44px 37px;
+    text-align: left;
+    background-color: #F5F8FE;
+    ;
+  }
+
+  .heading {
+    /* font-family: Plus Jakarta Sans; */
+    font-size: 23px !important;
+    font-weight: 700;
+    line-height: 48px !important;
+    text-align: left;
+  }
+
+  .mobile {
+    display: block !important;
+  }
+
+  .desktop {
+    display: none !important;
+  }
+}
+
+.desktop {
+  display: block;
+}
+
+.mobile {
+  display: none;
+}
+
+.placement_heading {
+  font-family: Plus Jakarta Sans;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 54px;
+  text-align: center;
+}
+
+.placement_paragraph {
+  font-family: Plus Jakarta Sans;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20.16px;
+  text-align: center;
+}
+
+.vector1 {
+  width: 47.98px;
+  height: 53.97px;
+
+}
+
+.vector2 {
+  width: 88px;
+  height: 54px;
+
+}
+
+.vector3 {
+  width: 54px;
+  height: 54px;
+
+}
+
+.vector4 {
+  width: 54px;
+  height: 54px;
+
+}
+
+.vtabs {
+  display: flex !important;
+  gap: 2rem;
+}
+
+.tablist {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  align-items: center;
+}
+
+.stab {
+  width: max-content;
+  cursor: pointer;
+  border-right: 8px solid #0D254D;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  color: #0D254D;
+}
+
+.react-tabs__tab--selected {
+  background: #0D254D !important;
+  border-color: #0D254D !important;
+  color: white !important;
+  /* border-radius: 5px 5px 0 0; */
+  padding: 7px !important;
+}
+
+.vdiv {
+  background-color: #F5F8FE;
+}
+
+.tabpanel {
+  background-color: #ffffff;
+}
+
+.imgbc {
+  background: url('../../public/gyanarthi.png');
+  background-size: contain;
+
+}
+
+
+.bgform {
+  background: #0D254DCC;
+}
+
+form {
+  gap: 0.4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.form {
+  background-color: #F5F8FE;
+}
+
+.text2010 {
+  width: 382px;
+  height: 105px;
+}
+
+.text2010border {
+  border-left: 0.5px solid #9F9F9F;
+}
+
+.tpip {
+  padding: 1rem;
+  background: #F5F8FE;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 32.76px;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #0D254D;
+}
+
+
+
+.vision {
+  background-color: #F5F8FE;
+  width: 943px;
+  height: 495px;
+  top: 1276px;
+  left: 373px;
+  gap: 0px;
+  opacity: 0px;
+  position: absolute;
+}
+
+.heading {
+  /* font-family: Plus Jakarta Sans; */
+  font-size: 39px;
+  font-weight: 700;
+  line-height: 67px;
+  text-align: left;
+}
+
+.formheading {
+  font-size: 25px !important;
+  font-weight: 700;
+  line-height: 48px;
+  text-align: center;
+}
+.applybutton {
+  /* width: Fixed (152px)px;
+  height: Fixed (45px)px;
+  top: 105px;
+  left: 1198px; */
+  padding: 15px 25px 15px 25px !important;
+  gap: 10px;
+  border-radius: 8px !important;
 }

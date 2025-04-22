@@ -1,103 +1,78 @@
-import Image from "next/image";
+"use client";
+import Header from "@/components/Header/Header";
+import Main from "@/components/Main/Main";
+
+
+import Footer from "@/components/Footer/Footer";
+
+import { useState } from "react";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const [activeTab, setActiveTab] = useState("UG");
+  const [open, setOpen] = useState(null);
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  const toggleOpen = (index) => {
+    setOpen(open === index ? null : index); // Toggle open state
+  };
+
+  const faqData = [
+    {
+      question: "Why should I join Gyanarthi  College?",
+      answer: "At Gyanarthi  College, you’ll experience a specialized learning method that builds you for the real world. With guidance from industry experts through workshops and industrial trips, you’ll get more than just theoretical knowledge."
+    },
+    {
+      question: "What makes Gyanarthi a better option for me?",
+      answer: "Gyanarthi  College offers more than just textbook learning. We provide a way to success. Our students enjoy a balance of academic learning and real-world experience guided by experienced teachers. With over 150 companies, including names like Reliance, NEWS15, and IIM Kashipur, consistently impressed by the caliber of our students, Gyanarthi opens doors to a world of career opportunities, making it the ideal choice for anyone serious about their future."
+    },
+    {
+      question: "What is the admission process for Gyanarthi  College?",
+      answer: "The admission process for Gyanarthi  College is very simple. You just need to fill out the application form and follow the steps outlined on our website. Our admissions team is also available to assist you with any questions or concerns you may have throughout the process."
+    },
+    {
+      question: "Will I get assistance in choosing my specialization?",
+      answer: "Yes, we at Gyanarthi  College believe in supporting our students in every aspect of their academic learning. Starting from the admission, our faculty is always there to assist students if they get stuck at some point."
+    },
+    
+  ];
+  
+  return (
+    <>
+     
+      <Header />
+      <Main />
+    
+
+     
+       <div className="py-16 bg-white">
+      <div className="container mx-auto px-6 max-w-7xl text-center">
+        <h2 className="text-3xl font-extrabold text-gray-800 mb-8">Frequently Asked Questions</h2>
+
+        {/* FAQ List */}
+        <div className="space-y-6">
+          {faqData.map((item, index) => (
+            <div key={index} className="border-b border-gray-300">
+              <div
+                onClick={() => toggleOpen(index)}
+                className="cursor-pointer flex justify-between items-center py-4 text-lg font-semibold text-gray-800 "
+              >
+                <span>{item.question}</span>
+                <span className={`transform transition-transform duration-300 ${open === index ? "rotate-45" : ""}`}>
+                  {/* Adding the "+" icon here */}
+                  <i className={`fas ${open === index ? "fa-minus" : "fa-plus"}`}></i>
+                </span>
+              </div>
+
+              {open === index && (
+                <div className="text-gray-600 text-left text-lg pb-4">{item.answer}</div>
+              )}
+            </div>
+          ))}
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
     </div>
+      <Footer />  
+
+
+    </>
   );
 }
