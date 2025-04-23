@@ -1683,19 +1683,9 @@ const Main = () => {
                         className="text-green-500 mb-4"
                       />
                       <p className="text-green-500 mb-4">
-                        Message sent successfully!
+                        Message sent successfully, Team Gyanarthi will contact you shortly!
                       </p>
-                      <button
-                        onClick={handleCloseModal}
-                        className="bg-green-500 text-white py-2 px-4 rounded"
-                      >
-                        Close
-                      </button>
                     </div>
-                    <div
-                      className="fixed inset-0 opacity-50"
-                      onClick={handleCloseModal}
-                    ></div>
                   </div>
                 )}
               </div>
