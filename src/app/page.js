@@ -51,7 +51,7 @@ export default function Home() {
           `,
         }}
         ></script>
-        <Script
+        <script
         src="https://www.googletagmanager.com/gtag/js?id=G-Z75FXN1HCQ"
         strategy="afterInteractive"
       />
