@@ -50,6 +50,22 @@ export default function Home() {
             })(window, document, "clarity", "script", "r8gqo9dp1g");
           `,
         }}
+        ></script>
+        <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-Z75FXN1HCQ"
+        strategy="afterInteractive"
+      />
+      <script
+        id="google-analytics"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-Z75FXN1HCQ');
+          `,
+        }}
       ></script>
       </head>
      
