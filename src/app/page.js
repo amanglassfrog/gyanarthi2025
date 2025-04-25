@@ -66,7 +66,12 @@ export default function Home() {
             gtag('config', 'G-Z75FXN1HCQ');
           `,
         }}
-      ></script>
+        ></script>
+        <script id="google-ads-conversion" strategy="afterInteractive">
+  {`
+    gtag('event', 'conversion', {'send_to': 'AW-956907995/SkFMCM_ag-4CENuDpcgD'});
+  `}
+</script>
       </head>
      
       <Header />
