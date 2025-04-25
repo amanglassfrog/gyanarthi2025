@@ -52,7 +52,7 @@ export default function Home() {
         }}
         ></script>
         <script
-        src="https://www.googletagmanager.com/gtag/js?id=G-Z75FXN1HCQ"
+        src="https://www.googletagmanager.com/gtag/js?id=AW-956907995"
         strategy="afterInteractive"
       />
       <script
@@ -63,7 +63,7 @@ export default function Home() {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-Z75FXN1HCQ');
+            gtag('config', 'AW-956907995');
           `,
         }}
         ></script>
