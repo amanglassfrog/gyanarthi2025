@@ -6,6 +6,7 @@ import Main from "@/components/Main/Main";
 import Footer from "@/components/Footer/Footer";
 
 import { useState } from "react";
+import Popup from "@/components/Popup/Popup";
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState("UG");
@@ -73,7 +74,7 @@ export default function Home() {
   `}
 </script>
       </head>
-     
+     <Popup/>
       <Header />
       <Main />
     
