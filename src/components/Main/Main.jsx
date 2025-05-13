@@ -1311,10 +1311,8 @@ const Main = () => {
       " BFA (4 years)",
       "BA Animation and Design (3 years)",
       "BSc Fashion Designing (3 years)",
-      "MA Animation and Design (2 years)",
-      "MSc Fashion Designing (2 years)",
     ],
-    MassMedia: ["BJMC (3 years)", "MJMC (2 years)"],
+    MassMedia: ["BJMC (3 years)"],
     // Add more courses and programs as needed
   };
 
@@ -1683,7 +1681,8 @@ const Main = () => {
                         className="text-green-500 mb-4"
                       />
                       <p className="text-green-500 mb-4">
-                        Message sent successfully, Team Gyanarthi will contact you shortly!
+                        Message sent successfully, Team Gyanarthi will contact
+                        you shortly!
                       </p>
                     </div>
                   </div>

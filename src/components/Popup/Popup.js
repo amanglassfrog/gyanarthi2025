@@ -5,8 +5,8 @@ const courses = [
   { id: 2, name:   "BCom Banking and Finance (3 years)" },
   { id: 3, name: "BCom Financial Accounting (3 years)" },
     { id: 4, name: " BFA (4 years)" },
-    { id: 4, name: " BFA (4 years)" }, { id: 5, name: "BA Animation and Design (3 years)" }, { id: 6, name: "BSc Fashion Designing (3 years)" }, { id: 7, name: "MA Animation and Design (2 years)" }, { id: 8, name: "MSc Fashion Designing (2 years)" }, { id: 9, name: "BJMC (3 years)" },
-    { id: 10, name: "MJMC (2 years)" },
+    { id: 4, name: " BFA (4 years)" }, { id: 5, name: "BA Animation and Design (3 years)" }, { id: 6, name: "BSc Fashion Designing (3 years)" },  { id: 7, name: "BJMC (3 years)" },
+    
 ];
 
 const Popup = () => {
