@@ -81,12 +81,12 @@ const Popup = () => {
         setShowPopup(false); // Close the popup after submission
 
         // Trigger PDF download after successful form submission
-        setTimeout(() => {
-          const link = document.createElement("a");
-          link.href = "/GyanarthiCareerGuidance.pdf"; // Provide the correct path to the PDF
-          link.download = "GyanarthiCareerGuidance.pdf"; // Name of the PDF file
-          link.click(); // Trigger the download
-        }, 1000);
+        // setTimeout(() => {
+        //   const link = document.createElement("a");
+        //   link.href = "/GyanarthiCareerGuidance.pdf"; 
+        //   link.download = "GyanarthiCareerGuidance.pdf";
+        //   link.click(); 
+        // }, 1000);
       } else {
         alert("Failed to submit the form. Please try again.");
       }
@@ -113,7 +113,7 @@ const Popup = () => {
 
         {/* Left Side Text */}
         <div className="md:w-1/2 mb-6 md:mb-0 pr-0 md:pr-6">
-         <img src="/img1.jpg" className="h-[10rem] md:h-full"/>
+         <img src="/img1.jpg" className="h-[5rem] md:h-full"/>
         </div>
 
         {/* Right Side Form */}
@@ -122,11 +122,10 @@ const Popup = () => {
             Ready to take charge of your future?
           </h2>
           <p className="text-gray-700 text-xl">
-            Download our FREE Career Guidance eBook and discover the path to
-            your dream job today!
+           Get FREE CAREER COUNSELING from the college and discover the path to your dream job today!
           </p>
           <h3 className="text-xl font-semibold mb-4 pt-5">
-            Fill the form and get your eBook now
+           Fill out the form and get FREE CAREER COUNSELING from the college.
           </h3>
           {!formSubmitted ? (
             <form onSubmit={handleSubmit} className="space-y-3 font-sans">
