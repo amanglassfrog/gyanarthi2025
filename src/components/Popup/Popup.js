@@ -2,11 +2,13 @@ import { useEffect, useState } from "react";
 
 const courses = [
   { id: 1, name: "BCom (3 years)" },
-  { id: 2, name:   "BCom Banking and Finance (3 years)" },
+  { id: 2, name: "BCom Banking and Finance (3 years)" },
   { id: 3, name: "BCom Financial Accounting (3 years)" },
-    { id: 4, name: " BFA (4 years)" },
-    { id: 4, name: " BFA (4 years)" }, { id: 5, name: "BA Animation and Design (3 years)" }, { id: 6, name: "BSc Fashion Designing (3 years)" },  { id: 7, name: "BJMC (3 years)" },
-    
+  { id: 4, name: " BFA (4 years)" },
+  { id: 5, name: "BA Animation and Design (3 years)" },
+  { id: 6, name: "BSc Fashion Designing (3 years)" },
+  { id: 7, name: "BJMC (3 years)" },
+
 ];
 
 const Popup = () => {
@@ -101,7 +103,7 @@ const Popup = () => {
   if (!showPopup) return null;
 
   return (
-   <div className="fixed inset-0 bg-black bg-opacity-60 flex justify-center items-center z-50 p-4 ">
+    <div className="fixed inset-0 bg-black bg-opacity-60 flex justify-center items-center z-50 p-4 ">
       <div className="bg-white w-full max-w-4xl rounded-lg shadow-lg items-center flex flex-col md:flex-row p-6 relative">
         {/* Close button */}
         <button
@@ -113,19 +115,19 @@ const Popup = () => {
 
         {/* Left Side Text */}
         <div className="md:w-1/2 mb-6 md:mb-0 pr-0 md:pr-6">
-         <img src="/img1.jpg" className="h-[5rem] md:h-full"/>
+          <img src="/img1.jpg" className="h-[5rem] md:h-full" />
         </div>
 
         {/* Right Side Form */}
-              <div className="md:w-1/2">
-                   <h2 className="text-2xl font-semibold mb-4">
+        <div className="md:w-1/2">
+          <h2 className="text-2xl font-semibold mb-4">
             Ready to take charge of your future?
           </h2>
           <p className="text-gray-700 text-xl">
-           Get FREE CAREER COUNSELING from the college and discover the path to your dream job today!
+            Get FREE CAREER COUNSELING from the college and discover the path to your dream job today!
           </p>
           <h3 className="text-xl font-semibold mb-4 pt-5">
-           Fill out the form and get FREE CAREER COUNSELING from the college.
+            Fill out the form and get FREE CAREER COUNSELING from the college.
           </h3>
           {!formSubmitted ? (
             <form onSubmit={handleSubmit} className="space-y-3 font-sans">
