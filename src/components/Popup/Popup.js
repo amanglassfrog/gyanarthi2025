@@ -82,7 +82,7 @@ const Popup = () => {
       if (res.status === 200) {
         setFormSubmitted(true); // Mark the form as successfully submitted
         setShowPopup(false); // Close the popup after submission
-        toast.success("Form submitted successfully!..", {
+        toast.success("Form submitted successfully.Our team will get back to you soon", {
           position: "top-center",
           autoClose: 5000,
         });
