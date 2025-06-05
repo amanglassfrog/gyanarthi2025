@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import toast from "react-hot-toast";
 
 const courses = [
   { id: 1, name: "BCom (3 years)" },
@@ -81,6 +82,10 @@ const Popup = () => {
       if (res.status === 200) {
         setFormSubmitted(true); // Mark the form as successfully submitted
         setShowPopup(false); // Close the popup after submission
+        toast.success("Form submitted successfully!..", {
+          position: "top-center",
+          autoClose: 5000,
+        });
 
         // Trigger PDF download after successful form submission
         // setTimeout(() => {
