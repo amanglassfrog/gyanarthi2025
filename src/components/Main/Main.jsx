@@ -1330,19 +1330,31 @@ const Main = () => {
     setIsSubmitting(true); // Show loader
     try {
       {
-        await axios.post(
-          "https://sea-turtle-app-sm5l4.ondigitalocean.app/api/sendMail/gynarthi-web",
-          {
-            name,
-            email,
-            phone,
-            dob,
-            state: selectedState,
-            city: selectedCity,
-            course: selectedCourse,
-            program: selectedProgram,
-          }
-        );
+        // await axios.post(
+        //   "https://sea-turtle-app-sm5l4.ondigitalocean.app/api/sendMail/gynarthi-web",
+        //   {
+        //     name,
+        //     email,
+        //     phone,
+        //     dob,
+        //     state: selectedState,
+        //     city: selectedCity,
+        //     course: selectedCourse,
+        //     program: selectedProgram,
+        //   }
+        // );
+
+        await axios.post("/api/gynarthi-web", {
+          name,
+          email,
+          phone,
+          dob,
+          state: selectedState,
+          city: selectedCity,
+          course: selectedCourse,
+          program: selectedProgram,
+        });
+
         console.log("Form submission successful");
         setSubmitted(true);
         setName("");
